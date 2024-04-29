@@ -42,7 +42,6 @@ class bareos::profile::director (
   }
 
   # Add all default configs
-  include bareos::profile::director::client
   include bareos::profile::director::fileset
   include bareos::profile::director::jobdefs
   include bareos::profile::director::messages
