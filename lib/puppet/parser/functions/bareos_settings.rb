@@ -34,7 +34,7 @@ module Puppet::Parser::Functions
         next if required == false && (value.nil? || value == :undef)
         raise 'This directive is required, please set value' if value.nil? || value == :undef
 
-        v = v.instance_of?(Puppet::Pops::Evaluator::DeferredValue) ? v.resolve : v
+        value = v.instance_of?(Puppet::Pops::Evaluator::DeferredValue) ? value.resolve : value
 
         # defaults:
         # quote value
