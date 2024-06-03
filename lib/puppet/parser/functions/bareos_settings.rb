@@ -19,6 +19,8 @@ module Puppet::Parser::Functions
 
       raise 'Name of directive config key is invalid' unless directive =~ %r{^[a-zA-Z0-9 ]+$}
 
+
+
       # check array if allowed
       values = if (%w[acl runscript runscript_short].include?(dirty_type) || dirty_type =~ %r{[_-]list$} || dirty_type =~ %r{[_-]nested$}) && value_setting.is_a?(Array)
                  value_setting
@@ -31,6 +33,8 @@ module Puppet::Parser::Functions
         # ignore undef if not required
         next if required == false && (value.nil? || value == :undef)
         raise 'This directive is required, please set value' if value.nil? || value == :undef
+
+        v = v.instance_of?(Puppet::Pops::Evaluator::DeferredValue) ? v.resolve : v
 
         # defaults:
         # quote value
