@@ -223,6 +223,7 @@ define bareos::director::console (
   Optional[Bareos::Boolean] $tls_verify_peer = undef,
   Optional[Bareos::Boolean] $use_pam_authentication = undef,
   Optional[Bareos::List] $where_acl = undef,
+  Optional[String] $custom_cfg = undef,
 ) {
   include bareos::director
 

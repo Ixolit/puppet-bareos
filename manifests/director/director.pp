@@ -394,6 +394,7 @@ class bareos::director::director (
   $tls_verify_peer = undef,
   $ver_id = undef,
   $working_directory = undef,
+  $custom_cfg = undef,
 ) {
   include bareos::director
 

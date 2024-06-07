@@ -142,6 +142,7 @@ define bareos::console::director (
   $tls_key = undef,
   $tls_require = undef,
   $tls_verify_peer = undef,
+  $custom_cfg = undef,
 ) {
   include bareos::console
 
