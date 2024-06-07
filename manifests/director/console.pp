@@ -247,7 +247,7 @@ define bareos::director::console (
       [$command_acl, 'Command ACL', 'acl', false],
       [$file_set_acl, 'File Set ACL', 'acl', false],
       [$job_acl, 'Job ACL', 'acl', false],
-      [$password, 'Password', 'autopassword', true],
+      [$password, 'Password', 'autopassword', false],
       [$plugin_options_acl, 'Plugin Options ACL', 'acl', false],
       [$pool_acl, 'Pool ACL', 'acl', false],
       [$profile, 'Profile', 'resource_list', false],

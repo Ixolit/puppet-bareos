@@ -434,7 +434,7 @@ class bareos::director::director (
       [$omit_defaults, 'Omit Defaults', 'boolean', false],
       [$optimize_for_size, 'Optimize For Size', 'boolean', false],
       [$optimize_for_speed, 'Optimize For Speed', 'boolean', false],
-      [$password, 'Password', 'autopassword', true],
+      [$password, 'Password', 'autopassword', false],
       [$pid_directory, 'Pid Directory', 'directory', false],
       [$plugin_directory, 'Plugin Directory', 'directory', false],
       [$plugin_names, 'Plugin Names', 'plugin_names', false],
