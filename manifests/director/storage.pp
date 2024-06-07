@@ -271,6 +271,7 @@ define bareos::director::storage (
   $tls_require = undef,
   $tls_verify_peer = undef,
   $username = undef,
+  $custom_cfg = undef,
 ) {
   include bareos::director
 
