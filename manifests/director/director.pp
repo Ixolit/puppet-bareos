@@ -369,7 +369,7 @@ class bareos::director::director (
   $omit_defaults = undef,
   $optimize_for_size = undef,
   $optimize_for_speed = undef,
-  $password = 'PleaseChangeMe',
+  $password = undef,
   $pid_directory = undef,
   $plugin_directory = undef,
   $plugin_names = undef,
@@ -394,6 +394,7 @@ class bareos::director::director (
   $tls_verify_peer = undef,
   $ver_id = undef,
   $working_directory = undef,
+  $custom_cfg = undef,
 ) {
   include bareos::director
 
@@ -434,7 +435,7 @@ class bareos::director::director (
       [$omit_defaults, 'Omit Defaults', 'boolean', false],
       [$optimize_for_size, 'Optimize For Size', 'boolean', false],
       [$optimize_for_speed, 'Optimize For Speed', 'boolean', false],
-      [$password, 'Password', 'autopassword', true],
+      [$password, 'Password', 'autopassword', false],
       [$pid_directory, 'Pid Directory', 'directory', false],
       [$plugin_directory, 'Plugin Directory', 'directory', false],
       [$plugin_names, 'Plugin Names', 'plugin_names', false],

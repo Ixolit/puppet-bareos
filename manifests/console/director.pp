@@ -142,6 +142,7 @@ define bareos::console::director (
   $tls_key = undef,
   $tls_require = undef,
   $tls_verify_peer = undef,
+  $custom_cfg = undef,
 ) {
   include bareos::console
 
@@ -158,7 +159,7 @@ define bareos::console::director (
       [$address, 'Address', 'string', false],
       [$dir_port, 'Dir Port', 'pint32', false],
       [$heartbeat_interval, 'Heartbeat Interval', 'time', false],
-      [$password, 'Password', 'md5password', true],
+      [$password, 'Password', 'md5password', false],
       [$tls_allowed_cn, 'Tls Allowed Cn', 'string_list', false],
       [$tls_authenticate, 'Tls Authenticate', 'boolean', false],
       [$tls_ca_certificate_dir, 'Tls Ca Certificate Dir', 'directory', false],

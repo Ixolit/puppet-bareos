@@ -271,6 +271,7 @@ define bareos::director::storage (
   $tls_require = undef,
   $tls_verify_peer = undef,
   $username = undef,
+  $custom_cfg = undef,
 ) {
   include bareos::director
 
@@ -305,7 +306,7 @@ define bareos::director::storage (
       [$maximum_concurrent_read_jobs, 'Maximum Concurrent Read Jobs', 'pint32', false],
       [$media_type, 'Media Type', 'strname', true],
       [$paired_storage, 'Paired Storage', 'res', false],
-      [$password, 'Password', 'autopassword', true],
+      [$password, 'Password', 'autopassword', false],
       [$port, 'Port', 'pint32', false],
       [$protocol, 'Protocol', 'auth_protocol_type', false],
       [$tape_device, 'Tape Device', 'string_list', false],
