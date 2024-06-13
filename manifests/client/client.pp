@@ -334,6 +334,7 @@
 #
 class bareos::client::client (
   $ensure = present,
+  $conf_filename = 'bareos-fd',
   $absolute_job_timeout = undef,
   $allow_bandwidth_bursting = undef,
   $allowed_job_command = undef,
@@ -448,7 +449,7 @@ class bareos::client::client (
     $_require_res_messages = undef
   }
 
-  file { "${bareos::client::config_dir}/${_resource_dir}/bareos-fd.conf":
+  file { "${bareos::client::config_dir}/${_resource_dir}/${conf_filename}.conf":
     ensure  => $ensure,
     mode    => $bareos::file_mode,
     owner   => $bareos::file_owner,
