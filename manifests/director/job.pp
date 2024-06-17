@@ -716,9 +716,9 @@ define bareos::director::job (
         $_require_res_jobs,
         $_require_res_job_defs,
         $_require_res_message,
-        $_require_res_pools,
+        #$_require_res_pools,
         $_require_res_schedule,
-        $_require_res_storage,
+        #$_require_res_storage,
     ])
 
     $_settings = bareos_settings([$name, 'Name', 'name', true],
