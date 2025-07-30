@@ -373,7 +373,7 @@ class bareos::client::client (
   $tls_ca_certificate_file = undef,
   $tls_certificate = undef,
   $tls_certificate_revocation_list = undef,
-  $protocol = undef,
+  $tls_protocol = undef,
   $tls_cipher_list = undef,
   $tls_dh_file = undef,
   $tls_enable = undef,
